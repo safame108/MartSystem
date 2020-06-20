@@ -41,7 +41,6 @@ namespace WindowsFormsApp4
 
         private void button4_Click(object sender, EventArgs e)
         {
-
             NewMember newMem = new NewMember();
             newMem.Show();
             this.Hide();
@@ -75,6 +74,13 @@ namespace WindowsFormsApp4
         private void button2_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://mail.google.com/mail/mu/mp/519/#tl/priority/%5Esmartlabel_personal");
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Manager m = new Manager();
+            m.Show();
+            this.Hide();
         }
     }
 }

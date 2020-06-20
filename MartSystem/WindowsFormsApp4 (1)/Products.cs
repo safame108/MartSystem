@@ -51,12 +51,16 @@ namespace WindowsFormsApp4
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            update up = new update();
+            up.Show();
+            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            ProductBL b = new ProductBL();
+            b.RemoveProduct(int.Parse(textBox3.Text));
+            richTextBox1.Text = "\t---Deleted---"; 
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -112,6 +116,18 @@ namespace WindowsFormsApp4
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+            Admin a = new Admin();
+            a.Show();
+            this.Hide();
+        }
+
+        private void richTextBox1_TextChanged_1(object sender, EventArgs e)
         {
 
         }

@@ -34,7 +34,7 @@ namespace WindowsFormsApp4
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            System.Diagnostics.Process.Start("https://mail.google.com/mail/mu/mp/519/#tl/priority/%5Esmartlabel_personal");
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -68,6 +68,13 @@ namespace WindowsFormsApp4
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Manager m = new Manager();
+            m.Show();
+            this.Hide();
         }
     }
 }

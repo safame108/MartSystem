@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,6 +44,24 @@ namespace WindowsFormsApp4
 
             MemberDetails newDet = new MemberDetails();
             newDet.Show();
+            this.Hide();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void Warning_Load(object sender, EventArgs e)
+        {
+            ProductBL p = new ProductBL();
+            dataGridView1.DataSource = p.WarningList();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Admin a = new Admin();
+            a.Show();
             this.Hide();
         }
     }

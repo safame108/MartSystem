@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BusinessLayer;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp4
@@ -40,10 +34,21 @@ namespace WindowsFormsApp4
 
         private void Salary_Load(object sender, EventArgs e)
         {
-
+            ProductBL p = new ProductBL();
+            dataGridView1.DataSource = p.Sales();
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://mail.google.com/mail/mu/mp/519/#tl/priority/%5Esmartlabel_personal");
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
