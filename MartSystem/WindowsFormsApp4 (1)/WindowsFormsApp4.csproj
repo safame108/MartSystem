@@ -66,6 +66,7 @@
     <Compile Include="Checkout.Designer.cs">
       <DependentUpon>Checkout.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyCart.cs" />
     <Compile Include="update.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -9,24 +9,29 @@ using DataAccess;
 
 namespace BusinessLayer
 {
-  public class ProductBL
+    public class ProductBL
     {
         ProductsDAL PDAL;
 
-        public ProductBL() {
+        public ProductBL()
+        {
             PDAL = new ProductsDAL();
         }
 
-        public SqlDataAdapter DisplayProducts() {
+        public SqlDataAdapter DisplayProducts()
+        {
             return PDAL.DisplayProducts();
         }
-        public void AddProduct(ProductBO P){
+        public void AddProduct(ProductBO P)
+        {
             PDAL.AddProduct(P);
         }
-        public ProductBO UpdateProduct(ProductBO P){
+        public ProductBO UpdateProduct(ProductBO P)
+        {
             return PDAL.UpdateProduct(P);
         }
-        public ProductBO RetrieveProductInfo(int id){
+        public ProductBO RetrieveProductInfo(int id)
+        {
             return PDAL.RetrieveProductInfo(id);
         }
         public SqlDataAdapter RetrieveProductInfo(string name)
@@ -42,7 +47,23 @@ namespace BusinessLayer
             return GetCategories();
 
         }
+        public SqlDataAdapter WarningList()
+        {
+            return PDAL.WarningList();
+        }
 
+        public SqlDataAdapter Sales()
+        {
+            return PDAL.Sales();
+        }
 
+        public void RemoveProduct(int id)
+        {
+            PDAL.RemoveProduct(id);
+        }
+        public void AddSales(Cart c)
+        {
+            PDAL.AddSales(c);
+        }
     }
 }

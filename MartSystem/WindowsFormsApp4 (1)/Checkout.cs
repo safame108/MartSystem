@@ -2,16 +2,21 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BuisnessObject;
+using BusinessLayer;
 
 namespace WindowsFormsApp4
 {
     public partial class Checkout : Form
     {
+        ProductBL PL = new ProductBL();
+        MyCart C = new MyCart();
         public Checkout()
         {
             InitializeComponent();
@@ -37,7 +42,13 @@ namespace WindowsFormsApp4
 
         private void Checkout_Load(object sender, EventArgs e)
         {
-
+            ReciptRTB.Text = "";
+            ReciptRTB.AppendText("=======================================\n");
+            ReciptRTB.AppendText("=============== M  A  R  T ==============\n");
+            ReciptRTB.AppendText("========    C  H  E  C  K  O  U  T  ========\n");
+            ReciptRTB.AppendText("=======================================\n");
+            ReciptRTB.AppendText("----------------------------------------------------\n");
+            ItemFill();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -63,6 +74,85 @@ namespace WindowsFormsApp4
         private void button4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        protected void ItemFill()
+        {
+            DataSet ds = new DataSet();
+
+            SqlDataAdapter da = PL.DisplayProducts();
+            da.Fill(ds);
+            comboBox1.DisplayMember = "Product_Name";
+            comboBox1.ValueMember = "Product_ID";
+            comboBox1.DataSource = ds.Tables[0];
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Recipt()
+        {
+            ReciptRTB.Text = "";
+            ReciptRTB.AppendText("=======================================\n");
+            ReciptRTB.AppendText("=============== M  A  R  T ==============\n");
+            ReciptRTB.AppendText("========    C  H  E  C  K  O  U  T  ========\n");
+            ReciptRTB.AppendText("=======================================\n");
+            ReciptRTB.AppendText("----------------------------------------------------\n");
+            ReciptRTB.AppendText(" No.     Item      Quantity       Price \n");
+            for (int i = 0; i < C.cart.Count; i++)
+            {
+                int n = i + 1;
+                string name = C.cart[i].ProductName;
+                string q = (C.cart[i].TotalQuantity).ToString();
+                double price = C.cart[i].UnitPrice;
+
+                ReciptRTB.AppendText(" " + (i + 1) + "     " + name + "           " + q + "           " + price + "\n");
+            }
+
+            ReciptRTB.AppendText("=========================================\n");
+            ReciptRTB.AppendText("                   Total Amount = " + C.TOTALPRICE);
+
+
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            //String name = (comboBox1.SelectedItem).ToString();
+            //C.removeCart(name);
+            //Recipt();
+            //MessageBox.Show("done");
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button5_Click_1(object sender, EventArgs e)
+        {
+            C.name = nameT.Text;
+            C.contact = contactT.Text;
+            C.UpdateInventory();
+            Cart finalcart = new Cart();
+            finalcart.contact = C.contact;
+            finalcart.name = C.name;
+            finalcart.totalItems = C.totalItems;
+            finalcart.TOTALPRICE = C.TOTALPRICE;
+            PL.AddSales(finalcart);
+            //
+            nameT.Text = "";
+            contactT.Text = "";
+            textBox2.Text = "";
+            ReciptRTB.Text = "";
+            ReciptRTB.AppendText("=======================================\n");
+            ReciptRTB.AppendText("=============== M  A  R  T ==============\n");
+            ReciptRTB.AppendText("========    C  H  E  C  K  O  U  T  ========\n");
+            ReciptRTB.AppendText("=======================================\n");
+            ReciptRTB.AppendText("----------------------------------------------------\n");
+            MessageBox.Show("RECEIPT GENERATED");
         }
     }
 }

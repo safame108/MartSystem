@@ -46,18 +46,19 @@ namespace DataAccess
 
         }
 
-        public ProductBO UpdateProduct(ProductBO P) {
+        public ProductBO UpdateProduct(ProductBO P)
+        {
 
             using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
             {
                 conn.Open();
-                string Query = "UPDATE Products  SET Unit_Price = @price,Product_Total_Quantity= @quantity)";
+                string Query = "UPDATE Products  SET Unit_Price = @price,Product_Total_Quantity= @quantity";
                 cmd = new SqlCommand(Query, conn);
-              //  cmd.Parameters.Add("@id", P.ProductID);
-               // cmd.Parameters.Add("@name", P.ProductName);
-               // cmd.Parameters.Add("@supplierid", P.SupplierID);
-               // cmd.Parameters.Add("@categoryid", P.CategoryID);
-               // cmd.Parameters.Add("@productdesc", P.ProductDesc);
+                //  cmd.Parameters.Add("@id", P.ProductID);
+                // cmd.Parameters.Add("@name", P.ProductName);
+                // cmd.Parameters.Add("@supplierid", P.SupplierID);
+                // cmd.Parameters.Add("@categoryid", P.CategoryID);
+                // cmd.Parameters.Add("@productdesc", P.ProductDesc);
                 cmd.Parameters.Add("@price", P.UnitPrice);
                 //cmd.Parameters.Add("@expire", P.ExpireDate);
                 cmd.Parameters.Add("@quantity", P.TotalQuantity);
@@ -69,7 +70,7 @@ namespace DataAccess
             return P;
         }
         public ProductBO RetrieveProductInfo(int id)
-        { 
+        {
             ProductBO P = new ProductBO();
             P.ProductID = id;
             using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
@@ -82,7 +83,7 @@ namespace DataAccess
                 {
                     if (reader.Read())
                     {
-                        P.ProductName= reader["Product_Name"].ToString();
+                        P.ProductName = reader["Product_Name"].ToString();
                         P.SupplierID = Convert.ToInt32(reader["Supplier_ID"].ToString());
                         P.CategoryID = Convert.ToInt32(reader["Category_ID"].ToString());
                         P.ProductDesc = reader["Product_desc"].ToString();
@@ -99,8 +100,9 @@ namespace DataAccess
             }
 
             return P;
-    }
-        public SqlDataAdapter RetrieveProductInfo(String name) {
+        }
+        public SqlDataAdapter RetrieveProductInfo(String name)
+        {
             ProductBO P = new ProductBO();
             P.ProductName = name;
 
@@ -127,7 +129,7 @@ namespace DataAccess
         //                    if (reader.Read())
         //                    {
         //                        id = Convert.ToInt32(reader["Supplier_ID"].ToString());
-                             
+
         //                    }
         //                }
         //                cmd.ExecuteNonQuery();
@@ -148,40 +150,42 @@ namespace DataAccess
         //                conn.Close();
         //                break;
         //        }
-           
+
         //    }
         //        return id;
         //}
 
-        public List<SupplierBO> GetSuppliers() {
+        public List<SupplierBO> GetSuppliers()
+        {
             List<SupplierBO> s = new List<SupplierBO>();
             string Query;
             conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True");
-            
-                conn.Open();
-                Query = "EXEC SuppliersList";
-                cmd = new SqlCommand(Query, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
+
+            conn.Open();
+            Query = "EXEC SuppliersList";
+            cmd = new SqlCommand(Query, conn);
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
                 SupplierBO ss = new SupplierBO();
-                    ss.ID=Convert.ToInt32(reader["Supplier_ID"].ToString());
-                    ss.Name = reader["Supplier_Name"].ToString();
-                    ss.Contact = reader["Contact"].ToString();
-                    s.Add(ss);
-                }
-                cmd.ExecuteNonQuery();
+                ss.ID = Convert.ToInt32(reader["Supplier_ID"].ToString());
+                ss.Name = reader["Supplier_Name"].ToString();
+                ss.Contact = reader["Contact"].ToString();
+                s.Add(ss);
+            }
+            cmd.ExecuteNonQuery();
 
             return s;
 
         }
 
-        public List<CategoryBO> GetCategories() {
-     List<CategoryBO> s = new List<CategoryBO>();
-                string Query;
+        public List<CategoryBO> GetCategories()
+        {
+            List<CategoryBO> s = new List<CategoryBO>();
+            string Query;
             conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True");
-            
-                conn.Open();
+
+            conn.Open();
             Query = "EXEC CategoryList";
             cmd = new SqlCommand(Query, conn);
             SqlDataReader reader = cmd.ExecuteReader();
@@ -196,7 +200,77 @@ namespace DataAccess
 
             return s;
 
-    }
+        }
+        public SqlDataAdapter WarningList()
+        {
 
-}
+            conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True");
+
+            conn.Open();
+            String Query = "SELECT * FROM ProductQuantityWarning ";
+            SqlDataAdapter sqa = new SqlDataAdapter(Query, conn);
+            return sqa;
+        }
+
+        public SqlDataAdapter Sales()
+        {
+
+            conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True");
+
+            conn.Open();
+            String Query = "SELECT * FROM Sales s INNER JOIN Sales_Information si ON s.SaleID = si.SaleID";
+            SqlDataAdapter sqa = new SqlDataAdapter(Query, conn);
+            return sqa;
+        }
+
+        public void RemoveProduct(int id)
+        {
+            using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
+            {
+                conn.Open();
+                String Query = "DELETE FROM Products WHERE Product_ID = @id";
+                cmd = new SqlCommand(Query, conn);
+                cmd.Parameters.Add("@id", id);
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+
+        }
+
+        public void AddSales(Cart c)
+        {
+            using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
+            {
+                DateTime now = DateTime.Now;
+                conn.Open();
+                string Query = "INSERT INTO Sales VALUES(@id,@customername,@customerContact,@date,@time,@payment,@total)";
+                cmd = new SqlCommand(Query, conn);
+                cmd.Parameters.Add("@id", c.TOTALPRICE - c.totalItems);
+                cmd.Parameters.Add("@customername", c.name);
+                cmd.Parameters.Add("@customerContact", c.contact);
+                cmd.Parameters.Add("@date", now);
+                cmd.Parameters.Add("@time", now);
+                cmd.Parameters.Add("@payment", "cash");
+                cmd.Parameters.Add("@total", c.TOTALPRICE);
+
+                cmd.ExecuteNonQuery();
+
+                for (int i = 0; i < c.cart.Count; i++)
+                {
+                    string Query1 = "INSERT INTO Sales_Information VALUES(@sid,@pid,@q)";
+                    cmd = new SqlCommand(Query1, conn);
+                    // cmd.Parameters.Add("@id", 12 /*c.TOTALPRICE - c.totalItems*/);
+                    cmd.Parameters.Add("@sid", c.TOTALPRICE - c.totalItems);
+                    cmd.Parameters.Add("@pid", c.cart[i].ProductID);
+                    cmd.Parameters.Add("@q", c.cart[i].TotalQuantity);
+                    cmd.ExecuteNonQuery();
+
+                }
+
+
+                conn.Close();
+            }
+        }
+    }
 }

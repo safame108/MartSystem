@@ -11,16 +11,18 @@ using System.Configuration;
 
 namespace DataAccess
 {
-  public class EmployeeDAL
+    public class EmployeeDAL
     {
         SqlConnection conn;
         SqlCommand cmd;
-     
-        public EmployeeDAL() {
+
+        public EmployeeDAL()
+        {
 
         }
 
-        public void AddEmployee(EmployeeBO E,EmployeeDetails ED,SignUp Signup) {
+        public void AddEmployee(EmployeeBO E, EmployeeDetails ED, SignUp Signup)
+        {
             using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
             {
                 conn.Open();
@@ -41,12 +43,12 @@ namespace DataAccess
                 cmd.Parameters.Add("@branch", ED.Branch_ID);
                 cmd.Parameters.Add("@dept", ED.Department_ID);
                 cmd.Parameters.Add("@id", ED.Employee_ID);
-               
+
                 cmd.ExecuteNonQuery();
                 String Query3 = "INSERT INTO LogIn_Details VALUES(@name,@id,@password,@email)";
                 cmd = new SqlCommand(Query3, conn);
                 cmd.Parameters.Add("@id", Signup.ID);
-                cmd.Parameters.Add("@name",Signup.Username);
+                cmd.Parameters.Add("@name", Signup.Username);
                 cmd.Parameters.Add("@password", Signup.Password);
                 cmd.Parameters.Add("@email", Signup.Email);
 
@@ -55,19 +57,21 @@ namespace DataAccess
             }
         }
 
-        public void RemoveEmployee(EmployeeBO E) {
+        public void RemoveEmployee(EmployeeBO E)
+        {
             using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
             {
                 conn.Open();
                 String Query = "EXEC RemoveEmployee @id";
                 cmd = new SqlCommand(Query, conn);
-                cmd.Parameters.Add("@id", E.EmployeeID);            
+                cmd.Parameters.Add("@id", E.EmployeeID);
 
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
         }
-        public EmployeeBO UpdateEmployee(EmployeeBO E) {
+        public EmployeeBO UpdateEmployee(EmployeeBO E)
+        {
             using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
             {
                 conn.Open();
@@ -99,7 +103,7 @@ namespace DataAccess
                 {
                     if (reader.Read())
                     {
-                        E.FirstName= reader["First_Name"].ToString();
+                        E.FirstName = reader["First_Name"].ToString();
                         E.LastName = reader["Last_Name"].ToString();
                         E.ContactNumber = reader["Contact_Number"].ToString();
                         E.Address = reader["Address"].ToString();
@@ -118,7 +122,7 @@ namespace DataAccess
         {
             EmployeeBO E = new EmployeeBO();
             E.FirstName = name;
-     
+
             conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True");
 
             conn.Open();
@@ -128,7 +132,8 @@ namespace DataAccess
 
         }
 
-        private EmployeeDetails EmployeeWorkPropertiesIDs(EmployeeBO E){
+        private EmployeeDetails EmployeeWorkPropertiesIDs(EmployeeBO E)
+        {
             EmployeeDetails ED = new EmployeeDetails();
             ED.Employee_ID = E.EmployeeID;
             using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
@@ -154,7 +159,8 @@ namespace DataAccess
             return ED;
         }
         /// Proper Names
-        public WorkProperties EmployeeWorkProperties(EmployeeBO E) {
+        public WorkProperties EmployeeWorkProperties(EmployeeBO E)
+        {
             EmployeeDetails ED = EmployeeWorkPropertiesIDs(E);
             WorkProperties WP = new WorkProperties();
             using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
@@ -170,7 +176,7 @@ namespace DataAccess
                     {
                         WP.Position = reader["Position"].ToString();
                         WP.Salary = reader["Salary"].ToString();
-                       
+
                     }
                 }
                 cmd.ExecuteNonQuery();
@@ -191,7 +197,7 @@ namespace DataAccess
                 cmd.ExecuteNonQuery();
                 ///deprt
                  //BRANCH
-                String Query3= "SELECT * FROM Department WHERE Department_No = @id";
+                String Query3 = "SELECT * FROM Department WHERE Department_No = @id";
                 cmd = new SqlCommand(Query3, conn);
                 cmd.Parameters.Add("@id", ED.Department_ID);
                 using (SqlDataReader reader = cmd.ExecuteReader())
@@ -212,14 +218,15 @@ namespace DataAccess
         {
 
             conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True");
-            
-                conn.Open();
-                String Query = "EXEC EmployeeList";
-                SqlDataAdapter sqa = new SqlDataAdapter(Query, conn);
-                return sqa;
-            
+
+            conn.Open();
+            String Query = "EXEC EmployeeList";
+            SqlDataAdapter sqa = new SqlDataAdapter(Query, conn);
+            return sqa;
+
         }
-        public EmployeeBO SignAuthentication(String Username,String password,string option) {
+        public EmployeeBO SignAuthentication(String Username, String password, string option)
+        {
 
             EmployeeBO emp = new EmployeeBO();
             using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
@@ -253,14 +260,6 @@ namespace DataAccess
             return emp;
         }
 
-        public SqlDataAdapter WarningList() {
 
-            conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True");
-
-            conn.Open();
-            String Query = "SELECT * FROM ProductQuantityWarning ";
-            SqlDataAdapter sqa = new SqlDataAdapter(Query, conn);
-            return sqa;
-        }
     }
 }
