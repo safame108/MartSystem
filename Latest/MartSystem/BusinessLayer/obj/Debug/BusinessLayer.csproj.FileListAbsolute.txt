@@ -1,0 +1,18 @@
+C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BusinessLayer\bin\Debug\BuisnessObject.dll
+C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BusinessLayer\bin\Debug\DataAccess.dll
+C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BusinessLayer\bin\Debug\BuisnessObject.pdb
+C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BusinessLayer\bin\Debug\DataAccess.pdb
+C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BusinessLayer\bin\Debug\DataAccess.dll.config
+C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BusinessLayer\bin\Debug\EntityFramework.xml
+C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
+C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BusinessLayer\obj\Debug\BusinessLayer.pdb
+D:\DBMSLab_Project_Spring2020\MartSystem\MartSystem\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
+D:\DBMSLab_Project_Spring2020\MartSystem\MartSystem\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+D:\DBMSLab_Project_Spring2020\MartSystem\MartSystem\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\DBMSLab_Project_Spring2020\MartSystem\MartSystem\BusinessLayer\obj\Debug\BusinessLayer.pdb

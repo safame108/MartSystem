@@ -1,0 +1,12 @@
+C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BuisnessObject\bin\Debug\BuisnessObject.dll
+C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BuisnessObject\bin\Debug\BuisnessObject.pdb
+C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BuisnessObject\obj\Debug\BuisnessObject.csprojAssemblyReference.cache
+C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BuisnessObject\obj\Debug\BuisnessObject.csproj.CoreCompileInputs.cache
+C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BuisnessObject\obj\Debug\BuisnessObject.dll
+C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BuisnessObject\obj\Debug\BuisnessObject.pdb
+D:\DBMSLab_Project_Spring2020\MartSystem\MartSystem\BuisnessObject\bin\Debug\BuisnessObject.dll
+D:\DBMSLab_Project_Spring2020\MartSystem\MartSystem\BuisnessObject\bin\Debug\BuisnessObject.pdb
+D:\DBMSLab_Project_Spring2020\MartSystem\MartSystem\BuisnessObject\obj\Debug\BuisnessObject.csprojAssemblyReference.cache
+D:\DBMSLab_Project_Spring2020\MartSystem\MartSystem\BuisnessObject\obj\Debug\BuisnessObject.csproj.CoreCompileInputs.cache
+D:\DBMSLab_Project_Spring2020\MartSystem\MartSystem\BuisnessObject\obj\Debug\BuisnessObject.dll
+D:\DBMSLab_Project_Spring2020\MartSystem\MartSystem\BuisnessObject\obj\Debug\BuisnessObject.pdb
