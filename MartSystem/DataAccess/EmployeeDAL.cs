@@ -59,14 +59,9 @@ namespace DataAccess
             using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
             {
                 conn.Open();
-                String Query = "DELETE FROM Employees WHERE Employee_ID = @id";
+                String Query = "EXEC RemoveEmployee @id";
                 cmd = new SqlCommand(Query, conn);
-                cmd.Parameters.Add("@id", E.EmployeeID);
-               
-                cmd.ExecuteNonQuery();
-                String Query1 = "DELETE FROM Employees_Details WHERE Employee_ID = @id";
-                cmd = new SqlCommand(Query1, conn);
-                cmd.Parameters.Add("@id", E.EmployeeID);
+                cmd.Parameters.Add("@id", E.EmployeeID);            
 
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -233,8 +228,8 @@ namespace DataAccess
                 //JOB
                 String Query1 = "EXEC SignInRetriever @pas,@user,@position";
                 cmd = new SqlCommand(Query1, conn);
-                cmd.Parameters.Add("@pas", Username);
-                cmd.Parameters.Add("@user", password);
+                cmd.Parameters.Add("@pas", password);
+                cmd.Parameters.Add("@user", Username);
                 cmd.Parameters.Add("@position", option);
 
                 using (SqlDataReader reader = cmd.ExecuteReader())
