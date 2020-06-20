@@ -219,10 +219,43 @@ namespace DataAccess
             conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True");
             
                 conn.Open();
-                String Query = "SELECT * FROM Employees";
+                String Query = "EXEC EmployeeList";
                 SqlDataAdapter sqa = new SqlDataAdapter(Query, conn);
                 return sqa;
             
+        }
+        public EmployeeBO SignAuthentication(String Username,String password,string option) {
+
+            EmployeeBO emp = new EmployeeBO();
+            using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
+            {
+                conn.Open();
+                //JOB
+                String Query1 = "EXEC SignInRetriever @pas,@user,@position";
+                cmd = new SqlCommand(Query1, conn);
+                cmd.Parameters.Add("@pas", Username);
+                cmd.Parameters.Add("@user", password);
+                cmd.Parameters.Add("@position", option);
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        emp.EmployeeID = Convert.ToInt32(reader["Employee_ID"].ToString());
+                        emp.FirstName = reader["First_Name"].ToString();
+                        emp.LastName = reader["Last_Name"].ToString();
+                        emp.ContactNumber = reader["Contact_Number"].ToString();
+                        emp.HireDate = reader["Hire_Date"].ToString();
+                        emp.AccNumber = reader["Account_Number"].ToString();
+                        emp.Address = reader["Address"].ToString();
+
+                    }
+                }
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+
+            return emp;
         }
     }
 }
