@@ -252,5 +252,15 @@ namespace DataAccess
 
             return emp;
         }
+
+        public SqlDataAdapter WarningList() {
+
+            conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True");
+
+            conn.Open();
+            String Query = "SELECT * FROM ProductQuantityWarning ";
+            SqlDataAdapter sqa = new SqlDataAdapter(Query, conn);
+            return sqa;
+        }
     }
 }
