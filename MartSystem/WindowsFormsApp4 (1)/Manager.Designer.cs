@@ -44,6 +44,7 @@
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.Thistle;
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(357, 101);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(305, 96);
@@ -54,6 +55,7 @@
             // richTextBox2
             // 
             this.richTextBox2.BackColor = System.Drawing.Color.Thistle;
+            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox2.Location = new System.Drawing.Point(341, 246);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(336, 110);
@@ -111,17 +113,18 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "QUERIES";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Indigo;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button3.Location = new System.Drawing.Point(1, 229);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(191, 44);
             this.button3.TabIndex = 6;
-            this.button3.Text = "SALARY";
+            this.button3.Text = "Sales";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -149,6 +152,7 @@
             this.button5.TabIndex = 8;
             this.button5.Text = "Log Out";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel1
             // 
@@ -176,6 +180,7 @@
             this.Controls.Add(this.richTextBox1);
             this.Name = "Manager";
             this.Text = "Manager";
+            this.Load += new System.EventHandler(this.Manager_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

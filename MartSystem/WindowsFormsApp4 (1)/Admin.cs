@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BuisnessObject;
+using BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,7 +29,21 @@ namespace WindowsFormsApp4
 
         }
 
-        private void Admin_Load(object sender, EventArgs e)
+        public void showdetail(int id) 
+        
+        {
+            DateTime d = new DateTime();
+            string date = d.Date.ToString();
+            string time = d.TimeOfDay.ToString();
+            richTextBox1.Text = "Date:\t" + date + "\nTime\t" + time;
+            EmployeeBL emp = new EmployeeBL();
+            EmployeeBO ed = new EmployeeBO();
+            ed = emp.RetrieveEmployeeInfo(id);
+            richTextBox2.Text = "Name:\t\t" + ed.FirstName + " " + ed.LastName +
+                               "\nContact:\t" + ed.ContactNumber +
+                               "\nEmployeeID:\t" + ed.EmployeeID;
+        }
+        private void Admin_Load(object sender, EventArgs e,int id)
         {
 
         }
@@ -67,6 +83,17 @@ namespace WindowsFormsApp4
         }
 
         private void button1_Click_1(object sender, EventArgs e)
+        {
+            SignIn s = new SignIn();
+            s.Show();
+        }
+
+        private void richTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Admin_Load(object sender, EventArgs e)
         {
 
         }

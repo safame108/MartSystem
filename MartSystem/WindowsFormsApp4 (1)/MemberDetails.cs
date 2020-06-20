@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BusinessLayer;
+using BuisnessObject;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp4
@@ -49,6 +51,35 @@ namespace WindowsFormsApp4
             Warning newwarn = new Warning();
             newwarn.Show();
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(textBox3.Text);
+
+            EmployeeBO pro = new EmployeeBO();
+
+            EmployeeBL P = new EmployeeBL();
+
+            pro = P.RetrieveEmployeeInfo(id);
+
+            dataGridView1.Text =
+            "FirstName \t:" + pro.FirstName + "\n" +
+            "LastName \t:" + pro.LastName + "\n" +
+            "ContactNumber \t:" + pro.ContactNumber + "\n" +
+            "Address \t:" + pro.Address + "\n" +
+            "HireDate\t:" + pro.HireDate;
+ 
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

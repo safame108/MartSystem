@@ -47,7 +47,7 @@
             this.label1.BackColor = System.Drawing.Color.SaddleBrown;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(358, 32);
+            this.label1.Location = new System.Drawing.Point(422, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 26);
             this.label1.TabIndex = 0;
@@ -57,9 +57,10 @@
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.Bisque;
-            this.richTextBox1.Location = new System.Drawing.Point(309, 86);
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(294, 107);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(318, 86);
+            this.richTextBox1.Size = new System.Drawing.Size(339, 86);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "\n     DATE                 :    ________________________________\n\n     TIME      " +
     "            :   ________________________________\n";
@@ -71,7 +72,7 @@
             this.label2.BackColor = System.Drawing.Color.SaddleBrown;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(359, 205);
+            this.label2.Location = new System.Drawing.Point(344, 213);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(259, 24);
             this.label2.TabIndex = 4;
@@ -81,13 +82,15 @@
             // richTextBox2
             // 
             this.richTextBox2.BackColor = System.Drawing.Color.Bisque;
-            this.richTextBox2.Location = new System.Drawing.Point(309, 258);
+            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox2.Location = new System.Drawing.Point(294, 245);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(339, 111);
             this.richTextBox2.TabIndex = 5;
             this.richTextBox2.Text = "     NAME              :    ________________________________\n\n    CNIC NO        " +
     "  :    ________________________________\n\n    CONTACT NO  :   ___________________" +
     "_____________\n";
+            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
             // 
             // button2
             // 
@@ -96,7 +99,7 @@
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Location = new System.Drawing.Point(0, 169);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(235, 45);
+            this.button2.Size = new System.Drawing.Size(191, 45);
             this.button2.TabIndex = 7;
             this.button2.Text = "WARNING";
             this.button2.UseVisualStyleBackColor = false;
@@ -109,7 +112,7 @@
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button3.Location = new System.Drawing.Point(0, 127);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(235, 45);
+            this.button3.Size = new System.Drawing.Size(191, 45);
             this.button3.TabIndex = 8;
             this.button3.Text = "PRODUCTS";
             this.button3.UseVisualStyleBackColor = false;
@@ -120,7 +123,7 @@
             this.button1.BackColor = System.Drawing.Color.SaddleBrown;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(592, 387);
+            this.button1.Location = new System.Drawing.Point(581, 380);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 36);
             this.button1.TabIndex = 9;
@@ -135,7 +138,7 @@
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button4.Location = new System.Drawing.Point(1, 205);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(234, 53);
+            this.button4.Size = new System.Drawing.Size(190, 53);
             this.button4.TabIndex = 10;
             this.button4.Text = "NEW MEMBER";
             this.button4.UseVisualStyleBackColor = false;
@@ -146,9 +149,9 @@
             this.button5.BackColor = System.Drawing.Color.SaddleBrown;
             this.button5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(0, 258);
+            this.button5.Location = new System.Drawing.Point(0, 254);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(235, 55);
+            this.button5.Size = new System.Drawing.Size(191, 45);
             this.button5.TabIndex = 11;
             this.button5.Text = "MEMBER DETAILS";
             this.button5.UseVisualStyleBackColor = false;
@@ -163,7 +166,7 @@
             this.panel1.Controls.Add(this.button4);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(235, 429);
+            this.panel1.Size = new System.Drawing.Size(194, 429);
             this.panel1.TabIndex = 12;
             // 
             // Admin

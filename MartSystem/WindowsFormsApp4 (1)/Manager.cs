@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BuisnessObject;
+using BusinessLayer;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp4
@@ -32,7 +34,6 @@ namespace WindowsFormsApp4
 
         private void button3_Click(object sender, EventArgs e)
         {
-
             Sales newPay = new Sales();
             newPay.Show();
             this.Hide();
@@ -44,6 +45,36 @@ namespace WindowsFormsApp4
             NewMember newMem = new NewMember();
             newMem.Show();
             this.Hide();
+        }
+
+        private void Manager_Load(object sender, EventArgs e)
+        {
+
+        }
+        public void showdetail(int id)
+
+        {
+            DateTime d = new DateTime();
+            string date = d.Date.ToString();
+            string time = d.TimeOfDay.ToString();
+            richTextBox1.Text = "Date:\t" + date + "\nTime\t" + time;
+            EmployeeBL emp = new EmployeeBL();
+            EmployeeBO ed = new EmployeeBO();
+            ed = emp.RetrieveEmployeeInfo(id);
+            richTextBox2.Text = "Name:\t\t" + ed.FirstName + " " + ed.LastName +
+                               "\nContact:\t" + ed.ContactNumber +
+                               "\nEmployeeID:\t" + ed.EmployeeID;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SignIn s = new SignIn();
+            s.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://mail.google.com/mail/mu/mp/519/#tl/priority/%5Esmartlabel_personal");
         }
     }
 }

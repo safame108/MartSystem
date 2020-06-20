@@ -47,8 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs">
-      <SubType>Form</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
@@ -66,11 +66,11 @@
     <Compile Include="Checkout.Designer.cs">
       <DependentUpon>Checkout.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard.cs">
+    <Compile Include="update.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
+    <Compile Include="update.Designer.cs">
+      <DependentUpon>update.cs</DependentUpon>
     </Compile>
     <Compile Include="logo.cs">
       <SubType>Form</SubType>
@@ -144,8 +144,8 @@
     <EmbeddedResource Include="Checkout.resx">
       <DependentUpon>Checkout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
+    <EmbeddedResource Include="update.resx">
+      <DependentUpon>update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="logo.resx">
       <DependentUpon>logo.cs</DependentUpon>
@@ -241,6 +241,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\checkout1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BuisnessObject\BuisnessObject.csproj">
+      <Project>{b58f0c95-7f8e-495b-8feb-e0bccdb68db0}</Project>
+      <Name>BuisnessObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{5a7502bf-2067-4414-a931-908e502fa1a6}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -68,6 +68,7 @@
             this.Controls.Add(this.button2);
             this.Name = "logo";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.logo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -57,6 +57,7 @@
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.Bisque;
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(294, 107);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(339, 86);
@@ -81,6 +82,7 @@
             // richTextBox2
             // 
             this.richTextBox2.BackColor = System.Drawing.Color.Bisque;
+            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox2.Location = new System.Drawing.Point(294, 245);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(339, 111);
@@ -88,6 +90,7 @@
             this.richTextBox2.Text = "     NAME              :    ________________________________\n\n    CNIC NO        " +
     "  :    ________________________________\n\n    CONTACT NO  :   ___________________" +
     "_____________\n";
+            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
             // 
             // button2
             // 

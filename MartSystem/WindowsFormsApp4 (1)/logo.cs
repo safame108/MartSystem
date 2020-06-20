@@ -29,6 +29,9 @@ namespace WindowsFormsApp4
             this.Hide();
         }
 
-       
+        private void logo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
