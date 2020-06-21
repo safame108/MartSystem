@@ -28,6 +28,7 @@ namespace WindowsFormsApp4
         {
             SignIn s = new SignIn();
             s.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)

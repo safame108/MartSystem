@@ -154,5 +154,31 @@ namespace WindowsFormsApp4
             ReciptRTB.AppendText("----------------------------------------------------\n");
             MessageBox.Show("RECEIPT GENERATED");
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            int quantity = Convert.ToInt32(quantityT.Text);
+            String name = (comboBox1.SelectedItem).ToString();
+
+            ProductBO ProductSelected = PL.RetrieveProductInfo(Convert.ToInt32(comboBox1.SelectedValue));
+            ProductBO p = new ProductBO();
+            p.ProductID = Convert.ToInt32(comboBox1.SelectedValue);
+            p.ProductName = ProductSelected.ProductName;
+            p.UnitPrice = ProductSelected.UnitPrice * quantity;
+            p.TotalQuantity = quantity;
+            C.TOTALPRICE += p.UnitPrice;
+
+            C.addCart(p);
+            textBox2.Text = C.TOTALPRICE.ToString();
+            Recipt();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            String name = (comboBox1.Text).ToString();
+            C.removeCart(name);
+            Recipt();
+            textBox2.Text = C.TOTALPRICE.ToString();
+        }
     }
 }

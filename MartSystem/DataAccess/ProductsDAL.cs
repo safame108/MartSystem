@@ -15,7 +15,7 @@ namespace DataAccess
 
         public SqlDataAdapter DisplayProducts()
         {
-            conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True");
+            conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True");
 
             conn.Open();
             String Query = "EXEC ProductsDisplay";
@@ -25,7 +25,7 @@ namespace DataAccess
 
         public void AddProduct(ProductBO P)
         {
-            using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
+            using (conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True"))
             {
                 conn.Open();
                 string Query = "INSERT INTO Products VALUES(@id,@name,@supplierid,@categoryid,@productdesc,@price,@expire,@quantity)";
@@ -49,7 +49,7 @@ namespace DataAccess
         public ProductBO UpdateProduct(ProductBO P)
         {
 
-            using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
+            using (conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True"))
             {
                 conn.Open();
                 string Query = "UPDATE Products  SET Unit_Price = @price,Product_Total_Quantity= @quantity";
@@ -73,7 +73,7 @@ namespace DataAccess
         {
             ProductBO P = new ProductBO();
             P.ProductID = id;
-            using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
+            using (conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True"))
             {
                 conn.Open();
                 String Query = "SELECT * FROM Products WHERE Product_ID = @id";
@@ -106,7 +106,7 @@ namespace DataAccess
             ProductBO P = new ProductBO();
             P.ProductName = name;
 
-            conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True");
+            conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True");
 
             conn.Open();
             String Query = "SELECT * FROM Products WHERE Product_Name LIKE '%" + name + "%'";
@@ -117,7 +117,7 @@ namespace DataAccess
         //public int IdSelector (string option,string name){
         //    int id=-1;
         //    string Query;
-        //    using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
+        //    using (conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True"))
         //    {
         //        conn.Open();
         //        switch (option) {
@@ -159,7 +159,7 @@ namespace DataAccess
         {
             List<SupplierBO> s = new List<SupplierBO>();
             string Query;
-            conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True");
+            conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True");
 
             conn.Open();
             Query = "EXEC SuppliersList";
@@ -183,7 +183,7 @@ namespace DataAccess
         {
             List<CategoryBO> s = new List<CategoryBO>();
             string Query;
-            conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True");
+            conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True");
 
             conn.Open();
             Query = "EXEC CategoryList";
@@ -204,7 +204,7 @@ namespace DataAccess
         public SqlDataAdapter WarningList()
         {
 
-            conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True");
+            conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True");
 
             conn.Open();
             String Query = "SELECT * FROM ProductQuantityWarning ";
@@ -215,7 +215,7 @@ namespace DataAccess
         public SqlDataAdapter Sales()
         {
 
-            conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True");
+            conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True");
 
             conn.Open();
             String Query = "SELECT * FROM Sales s INNER JOIN Sales_Information si ON s.SaleID = si.SaleID";
@@ -225,7 +225,7 @@ namespace DataAccess
 
         public void RemoveProduct(int id)
         {
-            using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
+            using (conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True"))
             {
                 conn.Open();
                 String Query = "DELETE FROM Products WHERE Product_ID = @id";
@@ -240,7 +240,7 @@ namespace DataAccess
 
         public void AddSales(Cart c)
         {
-            using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
+            using (conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True"))
             {
                 DateTime now = DateTime.Now;
                 conn.Open();

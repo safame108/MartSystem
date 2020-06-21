@@ -39,7 +39,7 @@ namespace WindowsFormsApp4
             for (int i = 0; i < cart.Count; i++)
             {
                 ProductBO product = PBL.RetrieveProductInfo(cart[i].ProductID);
-                product.UnitPrice -= cart[i].TotalQuantity;
+                product.TotalQuantity -= cart[i].TotalQuantity;
                 PBL.UpdateProduct(product);
             }
             totalItems = cart.Count;

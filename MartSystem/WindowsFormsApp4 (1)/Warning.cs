@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -55,13 +56,15 @@ namespace WindowsFormsApp4
         private void Warning_Load(object sender, EventArgs e)
         {
             ProductBL p = new ProductBL();
-            dataGridView1.DataSource = p.WarningList();
+            SqlDataAdapter da = p.WarningList();
+
+            DataTable tbl = new DataTable();
+            da.Fill(tbl);
+            dataGridView1.DataSource = tbl;
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-            Admin a = new Admin();
-            a.Show();
             this.Hide();
         }
     }

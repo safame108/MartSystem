@@ -31,7 +31,7 @@ namespace WindowsFormsApp4
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //string option = "";
+            
             EmployeeBL EBL = new EmployeeBL();
             EmployeeBO emp;
             switch (comboBox1.SelectedItem)

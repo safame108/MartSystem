@@ -113,7 +113,7 @@
             this.ReciptRTB.BackColor = System.Drawing.Color.Peru;
             this.ReciptRTB.Location = new System.Drawing.Point(509, 114);
             this.ReciptRTB.Name = "ReciptRTB";
-            this.ReciptRTB.Size = new System.Drawing.Size(242, 318);
+            this.ReciptRTB.Size = new System.Drawing.Size(271, 482);
             this.ReciptRTB.TabIndex = 28;
             this.ReciptRTB.Text = "";
             // 
@@ -168,7 +168,7 @@
             this.panel6.Controls.Add(this.button8);
             this.panel6.Location = new System.Drawing.Point(-5, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(171, 484);
+            this.panel6.Size = new System.Drawing.Size(171, 610);
             this.panel6.TabIndex = 24;
             // 
             // button7
@@ -217,6 +217,7 @@
             this.button6.TabIndex = 13;
             this.button6.Text = "REMOVE";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label9
             // 
@@ -268,6 +269,7 @@
             this.button9.TabIndex = 6;
             this.button9.Text = "ADD";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // label11
             // 

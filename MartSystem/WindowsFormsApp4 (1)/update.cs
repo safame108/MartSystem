@@ -56,5 +56,10 @@ namespace WindowsFormsApp4
             newProduct.Show();
             this.Hide();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

@@ -122,8 +122,7 @@ namespace WindowsFormsApp4
 
         private void label3_Click_1(object sender, EventArgs e)
         {
-            Admin a = new Admin();
-            a.Show();
+            
             this.Hide();
         }
 

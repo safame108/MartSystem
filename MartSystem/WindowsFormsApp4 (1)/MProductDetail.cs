@@ -55,7 +55,7 @@ namespace WindowsFormsApp4
 
             pro = P.RetrieveProductInfo(id);
 
-            dataGridView1.Text =
+            richTextBox1.Text =
             "ProductName\t:" + pro.ProductName + "\n" +
             "SupplierID\t:" + pro.SupplierID + "\n" +
             "CategoryID \t:" + pro.CategoryID + "\n" +
@@ -72,8 +72,7 @@ namespace WindowsFormsApp4
 
         private void label2_Click(object sender, EventArgs e)
         {
-            Manager m = new Manager();
-            m.Show();
+            
             this.Hide();
         }
     }

@@ -4,3 +4,9 @@ C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BuisnessObje
 C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BuisnessObject\obj\Debug\BuisnessObject.csproj.CoreCompileInputs.cache
 C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BuisnessObject\obj\Debug\BuisnessObject.dll
 C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\BuisnessObject\obj\Debug\BuisnessObject.pdb
+D:\FInal DBMS\MartSystem\MartSystem\BuisnessObject\bin\Debug\BuisnessObject.dll
+D:\FInal DBMS\MartSystem\MartSystem\BuisnessObject\bin\Debug\BuisnessObject.pdb
+D:\FInal DBMS\MartSystem\MartSystem\BuisnessObject\obj\Debug\BuisnessObject.csprojAssemblyReference.cache
+D:\FInal DBMS\MartSystem\MartSystem\BuisnessObject\obj\Debug\BuisnessObject.csproj.CoreCompileInputs.cache
+D:\FInal DBMS\MartSystem\MartSystem\BuisnessObject\obj\Debug\BuisnessObject.dll
+D:\FInal DBMS\MartSystem\MartSystem\BuisnessObject\obj\Debug\BuisnessObject.pdb

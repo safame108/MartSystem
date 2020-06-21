@@ -1,6 +1,8 @@
 ﻿using System;
 using BusinessLayer;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace WindowsFormsApp4
 {
@@ -35,7 +37,11 @@ namespace WindowsFormsApp4
         private void Salary_Load(object sender, EventArgs e)
         {
             ProductBL p = new ProductBL();
-            dataGridView1.DataSource = p.Sales();
+            SqlDataAdapter da = p.Sales();
+
+            DataTable tbl = new DataTable();
+            da.Fill(tbl);
+            dataGridView1.DataSource = tbl;
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -50,7 +56,9 @@ namespace WindowsFormsApp4
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            ProductBL p = new ProductBL();
+            dataGridView1.DataSource = p.Sales();
+            dataGridView1.Show();
         }
     }
 }

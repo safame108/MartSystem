@@ -63,7 +63,7 @@ namespace WindowsFormsApp4
 
             pro = P.RetrieveEmployeeInfo(id);
 
-            dataGridView1.Text =
+            richTextBox1.Text =
             "FirstName \t:" + pro.FirstName + "\n" +
             "LastName \t:" + pro.LastName + "\n" +
             "ContactNumber \t:" + pro.ContactNumber + "\n" +
@@ -84,8 +84,7 @@ namespace WindowsFormsApp4
 
         private void label2_Click(object sender, EventArgs e)
         {
-            Manager m = new Manager();
-            m.Show();
+           
             this.Hide();
         }
 

@@ -142,3 +142,39 @@ D:\GIT-Project\MartSystem\MartSystem\WindowsFormsApp4 (1)\bin\Debug\EntityFramew
 D:\GIT-Project\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.csproj.CopyComplete
 D:\GIT-Project\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.exe
 D:\GIT-Project\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.pdb
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\bin\Debug\Admin.resx
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\bin\Debug\Admin.cs
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\bin\Debug\Admin.Designer.cs
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\bin\Debug\WindowsFormsApp4.exe.config
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\bin\Debug\WindowsFormsApp4.exe
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\bin\Debug\WindowsFormsApp4.pdb
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\bin\Debug\BuisnessObject.dll
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\bin\Debug\BusinessLayer.dll
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\bin\Debug\DataAccess.dll
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\bin\Debug\EntityFramework.dll
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\bin\Debug\BuisnessObject.pdb
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\bin\Debug\BusinessLayer.pdb
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\bin\Debug\DataAccess.pdb
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\bin\Debug\DataAccess.dll.config
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\bin\Debug\EntityFramework.xml
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.csprojAssemblyReference.cache
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.Admin.resources
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.Cashier.resources
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.Checkout.resources
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.update.resources
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.logo.resources
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.Manager.resources
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.MemberDetails.resources
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.CProductDetails.resources
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.MProductDetail.resources
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.Products.resources
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.NewMember.resources
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.Properties.Resources.resources
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.Sales.resources
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.SignIn.resources
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.Warning.resources
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.csproj.GenerateResource.cache
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.csproj.CoreCompileInputs.cache
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.csproj.CopyComplete
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.exe
+D:\FInal DBMS\MartSystem\MartSystem\WindowsFormsApp4 (1)\obj\Debug\WindowsFormsApp4.pdb

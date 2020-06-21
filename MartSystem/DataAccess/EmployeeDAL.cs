@@ -23,17 +23,18 @@ namespace DataAccess
 
         public void AddEmployee(EmployeeBO E, EmployeeDetails ED, SignUp Signup)
         {
-            using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
+            using (conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True"))
             {
                 conn.Open();
-                String Query1 = "INSERT INTO Employees VALUES(@id,@First,@Last,@contact,@address,@hire,@account)";
+                String Query1 = "INSERT INTO Employees VALUES(@id,@First,@Last,@contact,@address,GETDATE(),@account)";
                 cmd = new SqlCommand(Query1, conn);
+               
                 cmd.Parameters.Add("@id", E.EmployeeID);
                 cmd.Parameters.Add("@First", E.FirstName);
                 cmd.Parameters.Add("@Last", E.LastName);
                 cmd.Parameters.Add("@contact", E.ContactNumber);
                 cmd.Parameters.Add("@address", E.Address);
-                cmd.Parameters.Add("@hire", E.HireDate);
+                //cmd.Parameters.Add("@hire", "getDate()");
                 cmd.Parameters.Add("@account", E.AccNumber);
                 cmd.ExecuteNonQuery();
 
@@ -59,7 +60,7 @@ namespace DataAccess
 
         public void RemoveEmployee(EmployeeBO E)
         {
-            using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
+            using (conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True"))
             {
                 conn.Open();
                 String Query = "EXEC RemoveEmployee @id";
@@ -72,7 +73,7 @@ namespace DataAccess
         }
         public EmployeeBO UpdateEmployee(EmployeeBO E)
         {
-            using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
+            using (conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True"))
             {
                 conn.Open();
                 String Query = "UPDATE Employees SET First_Name = @First , Last_Name = @Last , Contact_Number = @contact , Address = @address , Hire_Date = @hire , Account_Number = @account WHERE Employee_ID = @id";
@@ -93,7 +94,7 @@ namespace DataAccess
         {
             EmployeeBO E = new EmployeeBO();
             E.EmployeeID = id;
-            using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
+            using (conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True"))
             {
                 conn.Open();
                 String Query = "SELECT * FROM Employees WHERE Employee_ID = @id";
@@ -123,7 +124,7 @@ namespace DataAccess
             EmployeeBO E = new EmployeeBO();
             E.FirstName = name;
 
-            conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True");
+            conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True");
 
             conn.Open();
             String Query = "SELECT * FROM Employees WHERE First_Name LIKE '%" + name + "%'";
@@ -136,7 +137,7 @@ namespace DataAccess
         {
             EmployeeDetails ED = new EmployeeDetails();
             ED.Employee_ID = E.EmployeeID;
-            using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
+            using (conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True"))
             {
                 conn.Open();
                 String Query = "SELECT * FROM Employees_Details WHERE Employee_ID = @id";
@@ -163,7 +164,7 @@ namespace DataAccess
         {
             EmployeeDetails ED = EmployeeWorkPropertiesIDs(E);
             WorkProperties WP = new WorkProperties();
-            using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
+            using (conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True"))
             {
                 conn.Open();
                 //JOB
@@ -217,7 +218,7 @@ namespace DataAccess
         public SqlDataAdapter ShowEmployeeList()
         {
 
-            conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True");
+            conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True");
 
             conn.Open();
             String Query = "EXEC EmployeeList";
@@ -229,7 +230,7 @@ namespace DataAccess
         {
 
             EmployeeBO emp = new EmployeeBO();
-            using (conn = new SqlConnection(@"data source=DESKTOP-FBIGVNP;initial catalog=MartSystem;integrated security=True"))
+            using (conn = new SqlConnection(@"Data Source=ADMINRG-V7F0M8L;Initial Catalog=MartSystem;Integrated Security=True"))
             {
                 conn.Open();
                 //JOB

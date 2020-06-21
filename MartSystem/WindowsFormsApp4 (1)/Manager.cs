@@ -29,21 +29,20 @@ namespace WindowsFormsApp4
 
             MProductDetail newDetail = new MProductDetail();
             newDetail.Show();
-            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Sales newPay = new Sales();
             newPay.Show();
-            this.Hide();
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             NewMember newMem = new NewMember();
             newMem.Show();
-            this.Hide();
+            
         }
 
         private void Manager_Load(object sender, EventArgs e)
@@ -69,6 +68,7 @@ namespace WindowsFormsApp4
         {
             SignIn s = new SignIn();
             s.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)

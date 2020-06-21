@@ -33,7 +33,7 @@ namespace WindowsFormsApp4
         
         {
             DateTime d = new DateTime();
-            string date = d.Date.ToString();
+            string date =(d.ToShortDateString()).ToString();
             string time = d.TimeOfDay.ToString();
             richTextBox1.Text = "Date:\t" + date + "\nTime\t" + time;
             EmployeeBL emp = new EmployeeBL();
@@ -57,14 +57,14 @@ namespace WindowsFormsApp4
         {
             NewMember newMember = new NewMember();
             newMember.Show();
-            this.Hide();
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Products newProduct = new Products();
             newProduct.Show();
-            this.Hide();
+            
 
         }
 
@@ -72,20 +72,20 @@ namespace WindowsFormsApp4
         {
             Warning newWarnings = new Warning();
             newWarnings.Show();
-            this.Hide();
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             MemberDetails newDetails = new MemberDetails();
             newDetails.Show();
-            this.Hide();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             SignIn s = new SignIn();
             s.Show();
+            this.Hide();
         }
 
         private void richTextBox2_TextChanged(object sender, EventArgs e)

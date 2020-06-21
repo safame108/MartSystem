@@ -55,13 +55,13 @@ namespace WindowsFormsApp4
             EmployeeDetails ED = new EmployeeDetails();
             SignUp Signup = new SignUp();
 
-            DateTime d = new DateTime();
+            //DateTime d = new DateTime();
             E.EmployeeID = int.Parse(textBox1.Text);
             E.FirstName = textBox7.Text;
             E.LastName = textBox6.Text;
             E.ContactNumber = textBox8.Text;
             E.Address = textBox9.Text;
-            E.HireDate = (d.Date).ToString();
+            //E.HireDate = (d.Date).ToString();
             E.AccNumber = textBox10.Text;
 
             ED.Job_ID = int.Parse(textBox5.Text);
@@ -77,8 +77,6 @@ namespace WindowsFormsApp4
             EmployeeBL emd = new EmployeeBL();
             emd.AddEmployee(E, ED, Signup);
 
-            Manager s = new Manager();
-            s.Show();
             this.Hide();
         }
 
@@ -94,8 +92,6 @@ namespace WindowsFormsApp4
 
         private void label16_Click(object sender, EventArgs e)
         {
-            SignIn s = new SignIn();
-            s.Show();
             this.Hide();
         }
     }

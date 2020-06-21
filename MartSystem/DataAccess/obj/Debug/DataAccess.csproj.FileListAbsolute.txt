@@ -12,3 +12,17 @@ C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\DataAccess\o
 C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\PAKISTAN LAPTOP\Desktop\BSE4\DBMSLAB\MartSystem\MartSystem\DataAccess\obj\Debug\DataAccess.pdb
+D:\FInal DBMS\MartSystem\MartSystem\DataAccess\bin\Debug\DataAccess.dll.config
+D:\FInal DBMS\MartSystem\MartSystem\DataAccess\bin\Debug\DataAccess.dll
+D:\FInal DBMS\MartSystem\MartSystem\DataAccess\bin\Debug\DataAccess.pdb
+D:\FInal DBMS\MartSystem\MartSystem\DataAccess\bin\Debug\BuisnessObject.dll
+D:\FInal DBMS\MartSystem\MartSystem\DataAccess\bin\Debug\EntityFramework.dll
+D:\FInal DBMS\MartSystem\MartSystem\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\FInal DBMS\MartSystem\MartSystem\DataAccess\bin\Debug\BuisnessObject.pdb
+D:\FInal DBMS\MartSystem\MartSystem\DataAccess\bin\Debug\EntityFramework.xml
+D:\FInal DBMS\MartSystem\MartSystem\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\FInal DBMS\MartSystem\MartSystem\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+D:\FInal DBMS\MartSystem\MartSystem\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+D:\FInal DBMS\MartSystem\MartSystem\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+D:\FInal DBMS\MartSystem\MartSystem\DataAccess\obj\Debug\DataAccess.dll
+D:\FInal DBMS\MartSystem\MartSystem\DataAccess\obj\Debug\DataAccess.pdb
